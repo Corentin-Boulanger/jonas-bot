@@ -59,7 +59,7 @@ function setPlayerRole(msg) {
     var command = args[0];
     var memberName = args[1];
     var members = msg.guild.members;
-    var guildMember = members.find(val => (memberName.localeCompare(val.nickname) || memberName.localeCompare(val.user.username)));
+    var guildMember = members.find(val => (memberName === val.nickname || memberName === val.user.username));
 
     if (guildMember) {
 
@@ -67,15 +67,15 @@ function setPlayerRole(msg) {
       var roles = new Array();
       switch(command) {
         case('!jonas') :  
-          roles.push('460063465399255042');
+          roles.push('478221037692256266');
           break;
         
         case('!second') : 
-          roles.push('460063515487633418');
+          roles.push('478221191937785866');
           break;
 
         case('!joueur') : 
-          roles.push('460063556591943690');
+          roles.push('478221159750434827');
           break;
 
         default :
@@ -84,7 +84,7 @@ function setPlayerRole(msg) {
 
       // if guildmember is the admin, push admin role into roles array
       if (guildMember.roles.find(val => val.name === 'Gérant')) {
-        roles.push('460063082580803599');
+        roles.push('478205221827248129');
       }
 
       // set role
