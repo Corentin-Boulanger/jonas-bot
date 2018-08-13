@@ -49,6 +49,15 @@ bot.on('message', msg => {
 });
 
 /*
+ * Command to roll a dice between 1 and 100
+ */
+bot.on('message', msg => {
+  if (msg.content === '!roll') {
+    msg.channel.send(msg.author + ' rolled ' + (Math.floor(Math.random() * 100) + 1));
+  }
+});
+
+/*
  * Set the role of a player to 'Jonas', '2eme mondial' ou 'Joueur'.
  * @param msg the message containing the command
  */
