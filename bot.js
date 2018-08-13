@@ -66,16 +66,19 @@ function setPlayerRole(msg) {
       // creating new members' roles array
       var roles = new Array();
       switch(command) {
-        case('!jonas') :  
-          roles.push('478221037692256266');
+        case('!jonas') :
+          var newRole = guildMember.guild.roles.find(val => val.name === 'Jonas');  
+          roles.push(newRole.id);
           break;
         
         case('!second') : 
-          roles.push('478221191937785866');
+          var newRole = guildMember.guild.roles.find(val => val.name === '2ème mondial');  
+          roles.push(newRole.id);
           break;
 
         case('!joueur') : 
-          roles.push('478221159750434827');
+          var newRole = guildMember.guild.roles.find(val => val.name === 'Joueur');  
+          roles.push(newRole.id);
           break;
 
         default :
